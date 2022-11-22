@@ -15,12 +15,12 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 
 ### Screenshot
 
-![](./screenshots/screenshot.jpg)
+![](./screenshots/screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/markrajk/fm_sunnyside_agencylanding_page](https://github.com/markrajk/fm_sunnyside_agencylanding_page)
+- Live Site URL: [https://markrajk.github.io/fm_sunnyside_agencylanding_page/](https://markrajk.github.io/fm_sunnyside_agencylanding_page/)
 
 ## My process
 
