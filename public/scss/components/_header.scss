@@ -1,0 +1,127 @@
+@use "../utility/" as *;
+
+.primary-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3.2em 2.4em;
+    align-items: center;
+    justify-content: space-between;
+
+    @include respond(l) {
+        padding-inline: 4em;
+    }
+}
+
+.mobile-nav-toggle {
+    position: absolute;
+    top: 3.2em;
+    right: 2.4em;
+    width: 2.4em;
+    aspect-ratio: 1;
+    background-image: url(../images/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+
+    &[aria-expended="true"] {
+        opacity: .5;
+    }
+
+    @include respond(l) {
+        display: none!important;
+    }
+
+}
+
+.primary-navigation {
+    width: 100%;
+    max-width: 33.5em;
+    height: fit-content;
+    position: absolute;
+    padding: 4em 0;
+    // inset: 100% 2em auto auto;
+    top: 100%;
+    right: 2em;
+    background-color: white;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2em;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 2em;
+        aspect-ratio: 1;
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        background-color: white;
+        transform: translateY(-100%);
+    }
+
+    &[data-visible="false"] {
+        display: none;
+    }
+
+    &__item {
+        cursor: pointer;
+        & > a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        &:last-of-type {
+            @include respond(l) {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 2em;
+                font-size: 1.8em;
+                background-color: hsl(var(--clr-white));
+                color: hsl(var(--clr-blue-dark));
+                font-family: --ff-serif;
+                font-size: 1.5em;
+                font-weight: 700;
+                letter-spacing: -0.11px;
+                text-transform: uppercase;
+                padding: 1em 2em;
+                transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+
+                &:hover {
+                    background-color: hsl(var(--clr-white) / .25);
+                    color: hsl(var(--clr-white));
+                }
+            }
+        }
+
+        @include respond(l) {
+            color: hsl(var(--clr-white));
+        }
+    }
+
+    @include respond(l) {
+        position: relative;
+        top: auto;
+        right: auto;
+        max-width: fit-content;
+        padding: 0;
+        background-color: transparent;
+        flex-direction: row;
+
+
+        &::before {
+            display: none;
+        }
+
+        &[data-visible="false"] {
+            display: flex;
+        }
+    }
+}

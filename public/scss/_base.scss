@@ -1,0 +1,14 @@
+@use 'abstracts' as *;
+@use 'utility' as *;
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--ff-sans);
+    // font-size: var(--fs-500);
+    font-size: 1rem;
+    line-height: 1.5;
+}

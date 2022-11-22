@@ -1,0 +1,25 @@
+// $xs: 375px;
+// $s: 576px;
+// $m: 992px;
+// $l: 1200px;
+// $xl: 1400px;
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == m {
+        @media only screen and (min-width: 576px) {
+            @content
+        };
+    }
+
+    @if $breakpoint == l {
+        @media only screen and (min-width: 992px) {
+            @content
+        };
+    }
+
+    @if $breakpoint == xl {
+        @media only screen and (min-width: 1200px) {
+            @content
+        };
+    }
+}

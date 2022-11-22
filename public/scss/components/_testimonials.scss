@@ -1,0 +1,52 @@
+@use '../utility/' as *;
+
+.testimonials {
+    padding-block-start: 6.4em;
+    padding-block-end: 8.6em;
+    text-align: center;
+
+    & h2 {
+        @include respond(l) {
+            font-size: 2em;
+        }
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 8em;
+        gap: 6.4em;
+        justify-content: center;
+
+        @include respond(l) {
+            grid-template-columns: repeat(3, auto);
+        }
+    }
+
+    & .testimonial {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // justify-content: space-evenly;
+
+        & p {
+            line-height: 1.7;
+        }
+
+        & > p:first-of-type {
+            margin-bottom: 5.8rem;
+        }
+        
+
+        &__img {
+            width: 7.2em;
+            aspect-ratio: 1;
+            border-radius: 50%;
+        }
+
+        &__info {
+            margin-block-start: auto;
+        }
+    }
+}
